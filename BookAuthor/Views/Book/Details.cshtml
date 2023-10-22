@@ -1,0 +1,33 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Book Details</h1>
+<div class="row">
+    <div class="col-12">
+
+        <div class="form-group">
+            <label asp-for="@Model.Title" class="col-form-label"></label>
+            <input asp-for="@Model.Title" class="form-control" readonly />
+
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Description" class="col-form-label"></label>
+            <input asp-for="@Model.Description" class="form-control" readonly />
+
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.AuthorName" class="col-form-label"></label>
+            <input asp-for="@Model.AuthorName" class="form-control" readonly />
+
+        </div>
+        <br />
+        <a class="btn btn-primary" asp-action="Update" asp-route-id="@Model.Id">Edit</a>
+        <a asp-action="Index" class=" btn btn-light">Back To List</a>
+
+    </div>
+
+</div>
+
+

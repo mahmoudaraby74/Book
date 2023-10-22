@@ -1,0 +1,36 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Update";
+}
+
+
+<h1>Update Book</h1>
+<br />
+
+<div class="row">
+    <div class="col-6">
+        <form asp-action="Update" asp-controller="Book">
+            <input hidden asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="@Model.Title" class="col-form-label"></label>
+                <input asp-for="@Model.Title" class="form-control" />
+                <span asp-validation-for="@Model.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Description" class="col-form-label"></label>
+                <input asp-for="@Model.Description" class="form-control" />
+                <span asp-validation-for="@Model.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.AuthorName" class="col-form-label"></label>
+                <input asp-for="@Model.AuthorName" class="form-control" />
+                <span asp-validation-for="@Model.AuthorName" class="text-danger"></span>
+            </div>
+            <br />
+            <input type="submit" value="Save" class="btn btn-primary" />
+            <a asp-action="Index" class=" btn btn-light">Back To List</a>
+        </form>
+    </div>
+
+</div>
+
